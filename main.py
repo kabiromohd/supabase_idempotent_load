@@ -3,7 +3,6 @@ import hashlib
 import pandas as pd
 from connect_psycop import connect_to_supabase
 
-
 def generate_hash(row):
     """
     Create deterministic hash from row values
@@ -31,7 +30,7 @@ def load_orders():
                 );
             """)
 
-            with open("orders.csv", "r", newline="") as file:
+            with open("./data/orders.csv", "r", newline="") as file:
                 reader = csv.DictReader(file)
 
                 for row in reader:
